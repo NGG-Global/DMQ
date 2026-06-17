@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Heebo', system-ui, Arial, sans-serif;
+    color: #2c3e50;
+    background-color: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* קלט עברי RTL בכל השדות */
+  input,
+  textarea,
+  button {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  /* קו ההדגשה המג'נטה — חתימת המצגת מתחת לכותרות */
+  .magenta-underline::after {
+    content: '';
+    display: block;
+    width: 3.25rem;
+    height: 4px;
+    border-radius: 9999px;
+    background-color: #e2088c;
+    margin-top: 0.5rem;
+  }
+
+  /* כפתור פעולה ראשי — גלולה תכלת */
+  .pill-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sky px-8 py-3.5
+           text-base font-bold text-white shadow-pill transition
+           hover:brightness-105 active:scale-[0.98]
+           focus:outline-none focus-visible:ring-4 focus-visible:ring-sky/40
+           disabled:cursor-not-allowed disabled:opacity-60;
+  }
+}
+
+/* פס גלילה עדין במסכי תוכן */
+* {
+  scrollbar-width: thin;
+}
