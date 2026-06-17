@@ -3,7 +3,7 @@ import { fields } from '../data/questions'
 import type { ChoiceField } from '../data/questions'
 import type { FormState } from '../types'
 import { resolveChoices } from '../types'
-import { DelekMotorsLogo, NggLogo } from './Logos'
+import { NggLogo } from './Logos'
 
 // רוחב A4 קבוע בפיקסלים (96dpi) — מבטיח צילום עקבי בכל מכשיר.
 export const DOC_WIDTH_PX = 794
@@ -108,10 +108,9 @@ const CompassDocument = forwardRef<HTMLDivElement, Props>(({ form }, ref) => {
         </section>
       </div>
 
-      {/* כותרת תחתונה — לוגואים */}
-      <footer className="flex items-center justify-between border-t border-navy-deep/10 px-14 py-6">
-        <NggLogo />
-        <DelekMotorsLogo />
+      {/* כותרת תחתונה — לוגו NGG */}
+      <footer className="flex items-center justify-center border-t border-navy-deep/10 px-14 py-6">
+        <NggLogo tone="dark" width={96} />
       </footer>
     </div>
   )
