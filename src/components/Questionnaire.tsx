@@ -26,7 +26,7 @@ export default function Questionnaire({ form, setForm, onSubmit, onBack }: Props
 
       <main className="mx-auto w-full max-w-md px-6 py-6">
         <p className="mb-5 text-right text-sm leading-relaxed text-ink/70">
-          שש שאלות קצרות. אין תשובות נכונות — רק שלך. אפשר לדלג על מה שלא מתאים.
+          שש שאלות קצרות. אין תשובות נכונות — רק שלך.
         </p>
 
         <div className="space-y-4">
